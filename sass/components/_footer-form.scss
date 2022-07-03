@@ -1,0 +1,55 @@
+.footer-form {
+  @extend %list;
+
+  @media screen and (min-width: 1200px) {
+    @include centeredFlex();
+
+    &__item:not(:last-child) {
+      margin-right: 12px;
+    }
+  }
+
+  @media screen and (max-width: 1199px) {
+    &__item {
+      text-align: center;
+    }
+  }
+
+  padding: 0;
+}
+
+.footer-form__mail {
+  @media screen and (max-width: 479px) {
+    width: 100%;
+  }
+  @media screen and (min-width: 480px) and (max-width: 1199px) {
+    width: 450px;
+  }
+  @media screen and (min-width: 1199px) {
+    width: 358px;
+  }
+
+  height: 50px;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px $box-shadow-color-one);
+  border-radius: 4px;
+
+  background-color: $head-footer-bgcolor;
+  color: $primary-white-color;
+
+  outline: none;
+
+  padding-left: 16px;
+
+  cursor: pointer;
+
+  &::placeholder {
+    font-size: 16px;
+    line-height: 1.25;
+
+    letter-spacing: 0.03em;
+
+    color: rgba(255, 255, 255, 0.6);
+  }
+}
